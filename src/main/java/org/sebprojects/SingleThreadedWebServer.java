@@ -32,13 +32,13 @@ public class SingleThreadedWebServer {
                     }
 
                     // Handle POST request body
-//                    StringBuilder body = new StringBuilder();
-//                    if ("POST".equalsIgnoreCase(method)) {
-//                        while (in.ready()) {
-//                            body.append((char) in.read());
-//                        }
-//                        System.out.println("Body: " + body);
-//                    }
+                    StringBuilder body = new StringBuilder();
+                    if ("POST".equalsIgnoreCase(method)) {
+                        while (in.ready()) {
+                            body.append((char) in.read());
+                        }
+                        System.out.println("Body: " + body);
+                    }
 
                     // Write the HTTP response
                     PrintWriter out = new PrintWriter(socket.getOutputStream());
